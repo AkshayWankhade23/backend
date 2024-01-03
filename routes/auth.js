@@ -6,8 +6,8 @@ const User = require("../models/user");
 require("dotenv").config();
 
 // Error handler middleware
-const errorHandler = (req, res) => {
-  console.log(error);
+const errorHandler = (req, res, error) => {
+  console.error(error);
   res.status(500).json({ error: "Internal Server Error" });
 };
 
