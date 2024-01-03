@@ -39,10 +39,10 @@ app.use((err, req, res, next) => {
 
 // Start Server and Connected to MONGODB
 const Port = process.env.PORT || 4000;
-console.log(process.env.MONGODB_URI);
+// console.log(process.env.MONGODB_URI);
 app.listen(Port, () => {
   mongoose
-    .connect(process.env.MONGODB_URI)
+    .connect(`mongodb+srv://admin:admin123@cluster0.bfvjyny.mongodb.net/`)
     .then(() => console.log(`Server is running on http://localhost:${Port}`))
     .catch((error) => console.log(error));
 });
